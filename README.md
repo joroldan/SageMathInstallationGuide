@@ -10,9 +10,9 @@ Para ello ejecutar dentro de la terminal de WSL Arch:
 
 ```sudo pacman -Syu --noconfirm sagemath jupyterlab```
 
-Recuerda que al usar `sudo` te pedirá la contraseña y ¡ten paciencia!, el proceso es lento, pero luego ya estará casi. Con este paso SageMath ya está instalado. Se podría probar poniendo el comando `sage` y usar a través de la consola. Si hemos entrado para salir se hace con el comando `exit()`.
+Recuerda que al usar `sudo` te pedirá la contraseña y ¡ten paciencia!, el proceso es lento, pero luego ya estará casi. Con este paso SageMath ya está instalado. Se podría probar poniendo el comando `sage` y usar a través de la consola. Si hemos entrado en SageMath, para salir se hace con el comando `exit()`.
 
-## 3. Hacer que se use el navegador externo
+## 3. Hacer que se use el navegador de Windows para abrir SageMath
 
 Para ello ejecutar dentro de la terminal de WSL Arch:
 
@@ -27,7 +27,7 @@ Con esto ya se abre el navegador de Windows al ejecutar dentro de Arch `jupyter 
 ## 4. Crear el acceso directo a SageMath en nuestro escritorio
 
 Por último vamos a crear un acceso directo a SageMath en nuestro escritorio para facilitar el acceso. Para ello hacemos el acceso directo a mano poniendo como:
- - Destino (target): `%LocalAppData%\Microsoft\WindowsApps\arch.exe run 'export BROWSER=wslview && jupyter lab'`
+ - Destino (target): `%LocalAppData%\Microsoft\WindowsApps\arch.exe run "export BROWSER=wslview && jupyter lab"`
  - Iniciar en (working directory): `%USERPROFILE%`
 
 O ejecutamos las siguiente líneas en PowerShell (Windows):
