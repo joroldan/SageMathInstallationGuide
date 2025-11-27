@@ -34,7 +34,8 @@ O ejecutamos las siguiente líneas en PowerShell (Windows):
 ```
 $sh = New-Object -ComObject WScript.Shell
 $s = $sh.CreateShortcut('$env:USERPROFILE\Desktop\SageMath.lnk')
-$s.TargetPath = '$env:LocalAppData\Microsoft\WindowsApps\arch.exe' run "export BROWSER=wslview && jupyter lab"
+$s.TargetPath = '$env:LocalAppData\Microsoft\WindowsApps\arch.exe'
+$s.Arguments = 'run "export BROWSER=wslview && jupyter lab"'
 $s.WorkingDirectory = '$env:USERPROFILE'
 $s.Save()
 ```
