@@ -33,10 +33,10 @@ Por último vamos a crear un acceso directo a SageMath en nuestro escritorio par
 O ejecutamos las siguiente líneas en PowerShell (Windows):
 ```
 $sh = New-Object -ComObject WScript.Shell
-$s = $sh.CreateShortcut('$env:USERPROFILE\Desktop\SageMath.lnk')
-$s.TargetPath = '$env:LocalAppData\Microsoft\WindowsApps\arch.exe'
+$s = $sh.CreateShortcut("$env:USERPROFILE\Desktop\SageMath.lnk")
+$s.TargetPath = "$env:LocalAppData\Microsoft\WindowsApps\arch.exe"
 $s.Arguments = 'run "export BROWSER=wslview && jupyter lab"'
-$s.WorkingDirectory = '$env:USERPROFILE'
+$s.WorkingDirectory = "$env:USERPROFILE"
 $s.Save()
 ```
 De forma opcional puedes ponerle un icono bonito al acceso directo.
