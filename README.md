@@ -1,5 +1,7 @@
 # Instalar SageMath en Windows
 
+Fuente original de los ficheros del repositorio: https://pkgs.wedotstud.io/wslu/arch/
+
 ## 1. Instalar Arch en WSL
 
 Para ello accede a [https://apps.microsoft.com/store/detail/arch-wsl/9MZNMNKSM73X](https://apps.microsoft.com/store/detail/arch-wsl/9MZNMNKSM73X) y haz la instalación desde la web o la tienda de Windows. La instalación tardará unos minutos y te pedirá crear un usuario y contraseña para Arch. Recuérdalos para pasos posteriores.
