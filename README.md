@@ -22,7 +22,7 @@ sudo pacman -Syu --noconfirm wslu
 export BROWSER=wslview && echo "export BROWSER=wslview" >> .bashrc
 ```
 
-Con esto ya se abre el navegador de Windows al ejecutar dentro de Arch `sage -n jupyterlab`.
+Con esto ya se abre el navegador de Windows al ejecutar dentro de Arch `jupyter lab` y podemos usar SageMath fácilmente.
 
 ## 4. Crear el acceso directo a SageMath en nuestro escritorio
 
@@ -33,9 +33,9 @@ Por último vamos a crear un acceso directo a SageMath en nuestro escritorio par
 O ejecutamos las siguiente líneas en PowerShell (Windows):
 ```
 $sh = New-Object -ComObject WScript.Shell
-$s = $sh.CreateShortcut([System.IO.Path]::GetFullPath("$env:USERPROFILE\Desktop\SageMath.lnk"))
-$s.TargetPath = [System.IO.Path]::GetFullPath("$env:LocalAppData\Microsoft\WindowsApps\arch.exe run 'export BROWSER=wslview && jupyter lab'")
-$s.WorkingDirectory = [System.IO.Path]::GetFullPath("$env:USERPROFILE")
+$s = $sh.CreateShortcut('$env:USERPROFILE\Desktop\SageMath.lnk')
+$s.TargetPath = '$env:LocalAppData\Microsoft\WindowsApps\arch.exe' run "export BROWSER=wslview && jupyter lab"
+$s.WorkingDirectory = '$env:USERPROFILE'
 $s.Save()
 ```
 De forma opcional puedes ponerle un icono bonito al acceso directo.
